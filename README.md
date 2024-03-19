@@ -46,3 +46,5 @@ docker images prune all your docker images if you run into space issues
 ensure you build with the right platform during docker compose
 
 ##
+
+Use pm2 serve -l build 8443 --spa to server the build and keep it running
