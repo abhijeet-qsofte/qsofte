@@ -48,3 +48,23 @@ ensure you build with the right platform during docker compose
 ##
 
 Use pm2 serve -l build 8443 --spa to server the build and keep it running
+
+# Dockerise NodeJs ( React App)
+
+1. Create the appropriate docker file
+
+Run the following command
+
+docker build --platform="linux/amd64" -t qsofte:v0.10 .
+
+This command is used to build a Docker image from a Dockerfile. Here's what each part of the command does:
+
+- `docker build`: This is the command to build a Docker image.
+
+- `--platform="linux/amd64"`: This option specifies the platform the Docker image is built for. In this case, it's built for Linux systems with AMD64 architecture.
+
+- `-t qsofte:v0.10`: This option is used to tag the Docker image with a name and a version. In this case, the name of the image is `qsofte` and the version is `v0.10`.
+
+- `.`: This specifies the build context, which is the location of the Dockerfile and any files that are being copied into the Docker image. In this case, it's the current directory.
+
+So, this command builds a Docker image for Linux systems with AMD64 architecture, tags it with the name `qsofte` and the version `v0.10`, and uses the current directory as the build context.

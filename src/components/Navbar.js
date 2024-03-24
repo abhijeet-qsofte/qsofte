@@ -8,7 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 // Styled components for the navbar
 const NavbarContainer = styled.nav`
   position: fixed;
-  top: ${({ theme }) => theme.spacing.xsmall};
+  top: 0;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.lightBackground};
   padding: ${({ theme }) => theme.spacing.medium};
