@@ -12,17 +12,18 @@ COPY package*.json ./
 
 # Install the app dependencies
 RUN npm install
-# Install the app dependencies
+
+# Install `serve` globally to serve the built application
 RUN npm install -g serve
 
 # Copy the rest of the app source code to the working directory
 COPY . .
 
 # Build the app
-RUN npm run build --openssl-legacy-provider
+RUN npm run build
 
 # Expose the port your app will be running on
-EXPOSE 3000
+EXPOSE 5000
 
-# Define the command to run your app
-CMD ["npx", "serve -s build"]
+# Serve the app using `serve`. Adjust the port to match the EXPOSE command above
+CMD ["serve", "-s", "/qsofte/build", "-l", "5000"]
