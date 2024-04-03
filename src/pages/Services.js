@@ -66,8 +66,14 @@ function Services() {
   const services = [
     {
       title: 'Technology Consultancy',
-      description:
-        "At Qsofte, we understand that navigating the ever-evolving technology landscape can be challenging. Our technology consultancy service is designed to guide you through this complex journey, ensuring that your business leverages the most effective and innovative technologies available. Whether you're undergoing a digital transformation, seeking to improve operational efficiency, or exploring new tech-driven opportunities, our expert consultants are here to empower your decisions and drive your business forward.",
+      description: [
+        "Expert Guidance: Streamline your tech journey with Qsofte's seasoned consultants.",
+        'Innovative Solutions: Harness the latest technologies to elevate your business.',
+        'Enhanced Efficiency: Optimize operations for peak performance.',
+        'Strategic Exploration: Uncover and seize new technological opportunities.',
+        'Empowerment: Make informed decisions that propel progress.',
+        'Dynamic Transformation: Partner with Qsofte for a future-proof digital evolution.',
+      ],
       imageUrl: technologyConsultancyImage,
       alt: 'Technology Consultancy',
     },

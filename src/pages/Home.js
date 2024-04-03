@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { darken, lighten } from 'polished';
 import backgroundImage from '../assets/hero-3.jpg';
+import { Card, CardContent, Typography } from '@mui/material';
 
 const PageContainer = styled.div`
   display: flex;
@@ -76,6 +77,59 @@ const ImageSection = styled.section`
   background-position: right;
 `;
 
+const ClientCard = ({ client }) => (
+  <StyledCard>
+    <CardContent>
+      <Typography variant="h5">{client.name}</Typography>
+      <Typography variant="body2" color="text.secondary">
+        {client.description}
+      </Typography>
+    </CardContent>
+  </StyledCard>
+);
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center; // or 'center'
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+const StyledCard = styled(Card)`
+  width: 300px;
+  height: 200px; // Set a fixed height
+  margin: 10px;
+  display: flex; // Added to align the content in the center
+  align-items: center; // Added to align the content in the center
+  justify-content: center; // Added to align the content in the center
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const clients = [
+  {
+    name: 'Westpac',
+    description: 'Leading New Zealand Bank',
+  },
+  {
+    name: 'Atmabodh',
+    description:
+      'An NGO Pursuing of Human Rights Since 1999. They use our open emr service for their e-Medical Centre EHR management',
+  },
+  {
+    name: 'Chilli Masala',
+    description: 'One of the best Indian Restaurants in New Zealand',
+  },
+  {
+    name: 'Adyopant Legal',
+    description: 'A Law Firm in New Delhi, India',
+  },
+];
+
 function Home() {
   return (
     <>
@@ -102,6 +156,11 @@ function Home() {
           great support to help clients reach their goals and be innovative in
           their industries.
         </Paragraph>
+        <CardContainer>
+          {clients.map((client, index) => (
+            <ClientCard key={index} client={client} />
+          ))}
+        </CardContainer>
       </PageContainer>
     </>
   );
