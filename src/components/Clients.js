@@ -1,6 +1,10 @@
 // src/components/Clients.js
 import React from 'react';
 import styled from 'styled-components';
+import westpaclogo from '../assets/client-logo/westpaclogo.png';
+import atmabodhlogo from '../assets/client-logo/atmabodhlogo.png';
+import chillimasalalogo from '../assets/client-logo/chillimasalalogo.png';
+import adyopantlegallogo from '../assets/client-logo/adyopantlegallogo.png';
 
 const ClientsSection = styled.section`
   width: 100%;
@@ -22,14 +26,15 @@ const ClientsList = styled.div`
 `;
 
 const ClientLogo = styled.img`
-  max-width: 100px; // Adjust based on actual logo sizes
-  height: auto;
-  filter: grayscale(100%); // Makes the logos monochrome
-  transition: filter 0.3s ease;
+  max-width: 225px; // Adjust based on actual logo sizes
+  height: 220px;
+  object-fit: contain;
+  //filter: grayscale(100%); // Makes the logos monochrome
+  //transition: filter 0.3s ease;
 
-  &:hover {
-    filter: grayscale(0);
-  }
+  //  &:hover {
+  //   filter: grayscale(10);
+  // }
 `;
 
 const Clients = () => {
@@ -38,8 +43,11 @@ const Clients = () => {
       <SectionTitle>Our Clients</SectionTitle>
       <ClientsList>
         {/* Repeat ClientLogo for each client */}
-        <ClientLogo src="path/to/client-logo1.png" alt="Client Name 1" />
-        <ClientLogo src="path/to/client-logo2.png" alt="Client Name 2" />
+        <ClientLogo src={westpaclogo} alt="Westpac" />
+        <ClientLogo src={chillimasalalogo} alt="Westpac" />
+        <ClientLogo src={adyopantlegallogo} alt="Westpac" />
+        <ClientLogo src={atmabodhlogo} alt="Westpac" />
+
         {/* Add more as needed */}
       </ClientsList>
     </ClientsSection>

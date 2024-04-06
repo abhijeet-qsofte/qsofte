@@ -9,9 +9,16 @@ import technologyConsultancyImage from '../assets/img-services/consultancy.jpeg'
 import posImage from '../assets/img-services/pos.jpeg';
 import webDevelopmentImage from '../assets/img-services/webdevelopment.jpeg';
 import openEmrImage from '../assets/img-services/openemr.jpeg';
-import paymentsSMEImage from '../assets/img-services/payments.jpeg';
 import testingImage from '../assets/img-services/testing.jpeg';
 import { darken, lighten } from 'polished';
+import {
+  Heading,
+  HeroSection,
+  CallToActionButton,
+  PageContainer,
+  Subheading,
+  Paragraph,
+} from '../GlobalStyle.js';
 
 const CustomContainer = styled(Container)`
   margin-top: 10px;
@@ -20,7 +27,7 @@ const CustomContainer = styled(Container)`
     padding-top: 20px; // Adjust padding for small screens
   }
 `;
-const Heading = styled.h1`
+/*const Heading = styled.h1`
   color: ${({ theme }) => darken(0.2, theme.colors.secondary)};
   font-size: 1.5;
   text-align: center;
@@ -30,7 +37,7 @@ const Heading = styled.h1`
     font-size: 1.5rem; // Adjust font size for small screens
     margin-left: 10px; // Adjust margin for small screens
   }
-`;
+`;*/
 const ServiceCard = styled(Card)`
   display: flex; /* This makes the card flex container */
   margin: 20px 0;
@@ -38,6 +45,7 @@ const ServiceCard = styled(Card)`
   width: 100%; /* Sets the width to 75% of the screen */
   margin-left: auto; /* Centers the card horizontally */
   margin-right: auto;
+  background-color: ${({ theme }) => theme.colors.lightbackground};
 
   &:nth-child(even) {
     flex-direction: row;
@@ -55,7 +63,7 @@ const ServiceCard = styled(Card)`
 
 const CardContentFlex = styled(CardContent)`
   flex: 1; /* Allows the content to fill the available space */
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.light};
 
   @media (max-width: 600px) {
     padding: 0 0 0; // Adds padding for better readability on small screens
@@ -99,13 +107,6 @@ function Services() {
       alt: 'OpenEMR Solutions',
     },
     {
-      title: 'SME Expertise in Payments',
-      description:
-        'For small and medium-sized enterprises (SMEs), navigating the complexities of payment systems...',
-      imageUrl: paymentsSMEImage,
-      alt: 'SME Expertise in Payments',
-    },
-    {
       title: 'Testing Services',
       description:
         'Delivering high-quality software products demands rigorous testing...',
@@ -120,39 +121,36 @@ function Services() {
     setExpanded(expanded.map((x, j) => (i === j ? !x : x)));
   };
   return (
-    <CustomContainer maxWidth="lg">
-      <Typography variant="h2" gutterBottom>
-        Our Services
-      </Typography>
-      <Typography paragraph>
-        From bespoke software development to cloud services and beyond, Qsofte
-        offers a comprehensive range of services designed to empower your
-        business...
-      </Typography>
+    <>
+      <HeroSection>
+        <Heading>Our Services</Heading>
+      </HeroSection>
 
-      {services.map((service, index) => (
-        <ServiceCard key={index} onClick={() => handleExpandClick(index)}>
-          <CardMedia
-            component="img"
-            height={expanded[index] ? '480' : '240'}
-            image={service.imageUrl}
-            alt={service.alt}
-            style={{
-              width: '420px', // Adjust width as needed
-              transition: 'height 0.3s ease-in-out',
-            }}
-          />
-          <CardContentFlex>
-            <Heading>{service.title}</Heading>
-            <Collapse in={expanded[index]}>
-              <Typography variant="h5" color="">
-                {service.description}
-              </Typography>
-            </Collapse>
-          </CardContentFlex>
-        </ServiceCard>
-      ))}
-    </CustomContainer>
+      <PageContainer>
+        {services.map((service, index) => (
+          <ServiceCard key={index} onClick={() => handleExpandClick(index)}>
+            <CardMedia
+              component="img"
+              height={expanded[index] ? '480' : '240'}
+              image={service.imageUrl}
+              alt={service.alt}
+              style={{
+                width: '420px', // Adjust width as needed
+                transition: 'height 0.3s ease-in-out',
+              }}
+            />
+            <CardContentFlex>
+              <Subheading>{service.title}</Subheading>
+              <Collapse in={expanded[index]}>
+                <Typography variant="h5" color="">
+                  {service.description}
+                </Typography>
+              </Collapse>
+            </CardContentFlex>
+          </ServiceCard>
+        ))}
+      </PageContainer>
+    </>
   );
 }
 export default Services;

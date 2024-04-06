@@ -1,166 +1,36 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { darken, lighten } from 'polished';
-import backgroundImage from '../assets/hero-3.jpg';
-import { Card, CardContent, Typography } from '@mui/material';
+import Clients from '../components/Clients';
+import Services from './Services';
+import { StickyFooter } from '../GlobalStyle.js';
 
-const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 40px 20px;
-  background-color: ${({ theme }) => theme.colors.light};
-  min-height: 100vh;
-  text-align: justify;
-`;
-
-const Heading = styled.h1`
-  color: ${({ theme }) => lighten(0.1, theme.colors.secondary)};
-  font-size: 3.5rem;
-  margin-top: 150px;
-  margin-bottom: 20px;
-  margin-left: 35px;
-  text-align: center;
-  align-self: flex-start;
-  font-weight: bolder;
-`;
-
-const Subheading = styled.h2`
-  color: #333;
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-bottom: 30px;
-  text-align: center;
-`;
-
-const Paragraph = styled.p`
-  color: ${({ theme }) => theme.colors.primary};
-  width: 70%;
-  margin-left: 15%;
-  line-height: 1.8;
-  font-size: 1.3rem;
-  font-weight: semi bold;
-`;
-
-const Highlight = styled.span`
-  color: #1976d2;
-`;
-
-const CallToActionButton = styled(Button)`
-  && {
-    margin-top: 30px;
-    padding: 10px 30px;
-    font-weight: bold;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.primary};
-    &:hover {
-      background-color: ${({ theme }) => lighten(0.1, theme.colors.secondary)};
-    }
-  }
-`;
-const HeroSection = styled.section`
-  background-image: url(${backgroundImage});
-  color: white;
-  padding: 50px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  //height: 100vh;
-`;
-const ImageSection = styled.section`
-  width: 50%;
-  height: 500px; // Adjust as needed
-  background-image: url(${backgroundImage});
-  background-size: cover;
-  background-position: right;
-`;
-
-const ClientCard = ({ client }) => (
-  <StyledCard>
-    <CardContent>
-      <Typography variant="h5">{client.name}</Typography>
-      <Typography variant="body2" color="text.secondary">
-        {client.description}
-      </Typography>
-    </CardContent>
-  </StyledCard>
-);
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center; // or 'center'
-  align-items: center;
-  flex-wrap: wrap;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-const StyledCard = styled(Card)`
-  width: 300px;
-  height: 200px; // Set a fixed height
-  margin: 10px;
-  display: flex; // Added to align the content in the center
-  align-items: center; // Added to align the content in the center
-  justify-content: center; // Added to align the content in the center
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-`;
-
-const clients = [
-  {
-    name: 'Westpac',
-    description: 'Leading New Zealand Bank',
-  },
-  {
-    name: 'Atmabodh',
-    description:
-      'An NGO Pursuing of Human Rights Since 1999. They use our open emr service for their e-Medical Centre EHR management',
-  },
-  {
-    name: 'Chilli Masala',
-    description: 'One of the best Indian Restaurants in New Zealand',
-  },
-  {
-    name: 'Adyopant Legal',
-    description: 'A Law Firm in New Delhi, India',
-  },
-];
+import {
+  Heading,
+  HeroSection,
+  CallToActionButton,
+  PageContainer,
+  Subheading,
+  Paragraph,
+} from '../GlobalStyle.js';
 
 function Home() {
   return (
     <>
       <HeroSection>
-        <Heading>Your Trusted Technology Partner</Heading>
-        <Subheading></Subheading>
-        <CallToActionButton
-          variant="contained"
-          size="large"
-          as={Link}
-          to="/services"
-        >
-          Learn More
-        </CallToActionButton>
+        <Heading>Your Technology Partner</Heading>
       </HeroSection>
 
       <PageContainer>
+        <Subheading font="2">Innovate. Elevate. Excel.</Subheading>
         <Paragraph>
-          The Qsofte team is dedicated to giving great services to our clients.
-          Our team's passion, diversity, and creativity make us stand out. We're
-          experts and work hard to make our clients successful by helping them
-          be more efficient and make positive changes. We work closely with our
-          clients to make sure our services fit their needs. Our team offers
-          great support to help clients reach their goals and be innovative in
-          their industries.
+          At Qsofte, our passion for excellence transforms your business
+          challenges into success stories. We blend creativity, diversity, and
+          expertise to deliver personalized solutions that not only meet but
+          exceed your expectations.
         </Paragraph>
-        <CardContainer>
-          {clients.map((client, index) => (
-            <ClientCard key={index} client={client} />
-          ))}
-        </CardContainer>
+        <StickyFooter>
+          <Clients></Clients>
+        </StickyFooter>
       </PageContainer>
     </>
   );
