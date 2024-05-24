@@ -32,8 +32,8 @@ function Contact() {
     <ContactContainer>
       <ContactTitle>Contact Us</ContactTitle>
       <ContactInfo>
-        <ContactDetail>Phone: +64224142956</ContactDetail>
-        <ContactDetail>Email: info@qsofte.com </ContactDetail>
+        <ContactDetail>Phone:+64224142956</ContactDetail>
+        <ContactDetail>Email:info@qsofte.com </ContactDetail>
       </ContactInfo>
     </ContactContainer>
   );
