@@ -33,7 +33,7 @@ function Contact() {
       <ContactTitle>Contact Us</ContactTitle>
       <ContactInfo>
         <ContactDetail>Phone: +64224142956</ContactDetail>
-        <ContactDetail>Email: info@qsofte.com</ContactDetail>
+        <ContactDetail>Email: info@qsofte.com </ContactDetail>
       </ContactInfo>
     </ContactContainer>
   );
