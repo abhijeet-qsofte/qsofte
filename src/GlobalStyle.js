@@ -1,6 +1,6 @@
 // src/GlobalStyle.js
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { lighten } from 'polished';
 import { Button } from '@mui/material';
 import backgroundImage from './assets/hero-3.jpg';
@@ -52,6 +52,10 @@ export const Heading = styled.h1`
   text-align: center;
   align-self: flex-start;
   font-weight: bolder;
+
+  @media (max-width: 768px) {
+    font-size: 3.1rem; // Reduced font size for small screens
+  }
 `;
 
 export const PageContainer = styled.div`
@@ -71,6 +75,14 @@ export const Subheading = styled.h2`
   text-align: center;
 `;
 
+export const Subheading1 = styled.h1`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+`;
+
 export const Paragraph = styled.p`
   color: ${({ theme }) => theme.colors.primary};
   width: 70%;
@@ -78,6 +90,10 @@ export const Paragraph = styled.p`
   line-height: 1.8;
   font-size: 1.3rem;
   font-weight: semi bold;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem; // Reduced font size for small screens
+  }
 `;
 
 export const Highlight = styled.span`
@@ -86,7 +102,10 @@ export const Highlight = styled.span`
 
 export const CallToActionButton = styled(Button)`
   && {
+    display: inline-block;
+    max-width: 200px;
     margin-top: 30px;
+    margin: 0 auto;
     padding: 10px 30px;
     font-weight: bold;
     background-color: ${({ theme }) => theme.colors.secondary};
@@ -94,6 +113,8 @@ export const CallToActionButton = styled(Button)`
     &:hover {
       background-color: ${({ theme }) => lighten(0.1, theme.colors.secondary)};
     }
+    @media (max-width: 768px) {
+    } // Adjust as needed
   }
 `;
 export const HeroSection = styled.section`
@@ -118,6 +139,31 @@ export const StickyFooter = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
+  @media (max-width: 768px) {
+    height: 10%;
+  } // Adjust as needed
+`;
+
+export const Spacer = styled.div`
+  margin: ${({ top = '20px', bottom = '20px' }) => `${top} 0 ${bottom} 0`};
+  @media (max-width: 768px) {
+    height: 5px;
+  } // Adjust as needed
+`;
+
+export const roll = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+`;
+
+export const Subcontainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default GlobalStyle;

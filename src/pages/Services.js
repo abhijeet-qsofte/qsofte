@@ -18,6 +18,7 @@ import {
   PageContainer,
   Subheading,
   Paragraph,
+  Subheading1,
 } from '../GlobalStyle.js';
 
 const CustomContainer = styled(Container)`
@@ -120,12 +121,12 @@ function Services() {
   const handleExpandClick = (i) => {
     setExpanded(expanded.map((x, j) => (i === j ? !x : x)));
   };
+
   return (
     <>
       <HeroSection>
         <Heading>Our Services</Heading>
       </HeroSection>
-
       <PageContainer>
         {services.map((service, index) => (
           <ServiceCard key={index} onClick={() => handleExpandClick(index)}>
@@ -140,11 +141,9 @@ function Services() {
               }}
             />
             <CardContentFlex>
-              <Subheading>{service.title}</Subheading>
+              <Subheading1>{service.title}</Subheading1>
               <Collapse in={expanded[index]}>
-                <Typography variant="h5" color="">
-                  {service.description}
-                </Typography>
+                <Paragraph>{service.description}</Paragraph>
               </Collapse>
             </CardContentFlex>
           </ServiceCard>
