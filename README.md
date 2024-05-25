@@ -68,3 +68,30 @@ This command is used to build a Docker image from a Dockerfile. Here's what each
 - `.`: This specifies the build context, which is the location of the Dockerfile and any files that are being copied into the Docker image. In this case, it's the current directory.
 
 So, this command builds a Docker image for Linux systems with AMD64 architecture, tags it with the name `qsofte` and the version `v0.10`, and uses the current directory as the build context.
+
+## Setup Local Dev Environment
+
+1. clone the repository remote to local using command 'git clone link of repository'
+
+2. switch into the repository file using command 'cd fileName'
+
+3. install npm using command 'npm install'
+
+4. create new branch using command 'git checkout -b "branchName" '
+
+5. make some changes into repository .
+
+6. when we modify any file or add any file in repository then we have to add and commit the file.
+
+7. for add use command 'git add "fileName" '
+
+8. for commit use command 'git commit -m "some comments/message" '
+
+9. for run the repository use command 'npm start'
+
+10. After add and commit it is known as staged mode and now we are ready to push the modified/ untracked file into
+    remote repository.
+
+11. for push the modified file use command 'git push origin createdBranchName'
+
+12. Now we are ready to create pull request with any branch.
