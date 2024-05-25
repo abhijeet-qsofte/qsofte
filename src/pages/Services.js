@@ -88,8 +88,13 @@ function Services() {
     },
     {
       title: 'Retail POS Solutions',
-      description:
-        'In the fast-paced retail environment, efficiency and customer satisfaction are paramount...',
+      description:[
+        "Revolutionize your retail operations with our cutting-edge Retail POS Solutions.",
+        'Our point-of-sale systems are tailored to meet the specific needs of your business, ensuring seamless transactions,',
+        'efficient inventory management, and enhanced customer experiences.',
+        'Whether you are a small boutique or a large retail chain, our solutions provide the flexibility and scalability to grow with your business.',
+        'Trust Qsofte to deliver reliable, user-friendly POS systems that enhance your retail capabilities and boost profitability.',
+      ],
       imageUrl: posImage,
       alt: 'Retail POS Solutions',
     },
