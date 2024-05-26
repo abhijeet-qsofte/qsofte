@@ -76,7 +76,7 @@ So, this command builds a Docker image for Linux systems with AMD64 architecture
         (ii) Install NodeJs
         (iii) Install git bash
 
-    Now You can go for the steaps -->
+    Now You can go for the steps -->
 
 1. clone the repository remote to local using command 'git clone link of repository'
 
