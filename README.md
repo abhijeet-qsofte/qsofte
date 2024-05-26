@@ -71,6 +71,13 @@ So, this command builds a Docker image for Linux systems with AMD64 architecture
 
 ## Setup Local Dev Environment
 
+    * Before moving forward ensure that you hava to download these software on your system -->
+        (i) Install an IDE - 'we use vs code'
+        (ii) Install NodeJs
+        (iii) Install git bash
+
+    Now You can go for the steaps -->
+
 1. clone the repository remote to local using command 'git clone link of repository'
 
 2. switch into the repository file using command 'cd fileName'
@@ -89,7 +96,7 @@ So, this command builds a Docker image for Linux systems with AMD64 architecture
 
 9. for run the repository use command 'npm start'
 
-10. After add and commit it is known as staged mode and now we are ready to push the modified/ untracked file into
+10. After add and commit now we are ready to push the modified/ untracked file into
     remote repository.
 
 11. for push the modified file use command 'git push origin createdBranchName'
