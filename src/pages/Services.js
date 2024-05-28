@@ -18,7 +18,6 @@ import {
   PageContainer,
   Subheading,
   Paragraph,
-  Subheading1,
 } from '../GlobalStyle.js';
 
 const CustomContainer = styled(Container)`
@@ -88,30 +87,45 @@ function Services() {
     },
     {
       title: 'Retail POS Solutions',
-      description:
-        'In the fast-paced retail environment, efficiency and customer satisfaction are paramount...',
+      description:[
+        'Revolutionize your retail operations with our cutting-edge Retail POS Solutions.',
+        'efficient inventory management, and enhanced customer experiences.',
+        'Whether you are a small boutique or a large retail chain, our solutions provide the flexibility and scalability to grow with your business.',
+      ],
       imageUrl: posImage,
       alt: 'Retail POS Solutions',
     },
     {
       title: 'Website and App Development',
-      description:
-        'Your online presence is a critical component of your business success...',
+      description:[
+        'Qsofte offers comprehensive Website and App Development services to bring your digital vision to life.',
+        'Our talented team of developers and designers creates custom websites and mobile applications that are visually appealing, user-friendly, and fully optimized for performance.',
+        'From e-commerce platforms to corporate websites and innovative mobile apps, we build solutions that drive engagement, improve user experience, and deliver measurable results.',
+        'Let us help you establish a strong online presence and connect with your audience effectively.',
+      ],
       imageUrl: webDevelopmentImage,
       alt: 'Website and App Development',
     },
     {
       title: 'OpenEMR Solutions',
-      description:
-        'In the healthcare industry, managing medical records efficiently while ensuring compliance...',
-      imageUrl: openEmrImage,
+      description:[
+        'Transform your healthcare practice with our OpenEMR Solutions.',
+        'ur expertise in Electronic Medical Records (EMR) ensures that you have a robust, secure, and compliant system for managing patient information.',
+        'We customize OpenEMR to meet the specific needs of your practice, improving workflow efficiency, enhancing patient care, and ensuring data accuracy.',
+        'With Qsofte, you get a trusted partner dedicated to helping you navigate the complexities of healthcare technology and achieve operational excellence.',
+      ],
+        imageUrl: openEmrImage,
       alt: 'OpenEMR Solutions',
     },
     {
       title: 'Testing Services',
-      description:
-        'Delivering high-quality software products demands rigorous testing...',
-      imageUrl: testingImage,
+      description:[
+        'Ensure the quality and reliability of your software with our comprehensive Testing Services.',
+        'Our rigorous testing processes cover functional, performance, security, and usability testing to identify and address potential issues before they impact your users.',
+        'We use advanced tools and methodologies to deliver thorough and accurate results, ensuring your software meets the highest standards of quality.',
+        'Trust Qsofte to provide reliable testing solutions that enhance your software and its performance and reliability.',
+      ],
+        imageUrl: testingImage,
       alt: 'Testing Services',
     },
   ];
@@ -121,12 +135,12 @@ function Services() {
   const handleExpandClick = (i) => {
     setExpanded(expanded.map((x, j) => (i === j ? !x : x)));
   };
-
   return (
     <>
       <HeroSection>
         <Heading>Our Services</Heading>
       </HeroSection>
+
       <PageContainer>
         {services.map((service, index) => (
           <ServiceCard key={index} onClick={() => handleExpandClick(index)}>
@@ -141,9 +155,11 @@ function Services() {
               }}
             />
             <CardContentFlex>
-              <Subheading1>{service.title}</Subheading1>
+              <Subheading>{service.title}</Subheading>
               <Collapse in={expanded[index]}>
-                <Paragraph>{service.description}</Paragraph>
+                <Typography variant="h5" color="">
+                  {service.description}
+                </Typography>
               </Collapse>
             </CardContentFlex>
           </ServiceCard>
