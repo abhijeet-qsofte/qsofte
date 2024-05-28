@@ -9,7 +9,7 @@ function Contact() {
 
       Email : admin@qsofte.com
 
-      Address: 1 Te Hoiere Street , Aotea , Porirua , Wellington - 5024.
+      Address: 1 Te Hoiere Street , Aotea , Porirua , Wellington - 5024, New Zealand.
       </p>
     </div>
   );
