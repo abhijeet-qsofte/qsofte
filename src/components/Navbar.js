@@ -83,9 +83,6 @@ const Navbar = ({ theme }) => {
           <StyledNavLink to="/" exact activeClassName="active">
             Home
           </StyledNavLink>
-          <StyledNavLink to="/about" activeClassName="active">
-            About
-          </StyledNavLink>
           <StyledNavLink to="/services" activeClassName="active">
             Services
           </StyledNavLink>
