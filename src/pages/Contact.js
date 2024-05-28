@@ -5,13 +5,11 @@ function Contact() {
     <div className="pageContainer">
       <h1>Contact Us</h1>
       <p>
-        The Qsofte team is dedicated to giving great services to our clients.
-        Our team's passion, diversity, and creativity make us stand out. We're
-        experts and work hard to make our clients successful by helping them be
-        more efficient and make positive changes. We work closely with our
-        clients to make sure our services fit their needs. Our team offers great
-        support to help clients reach their goals and be innovative in their
-        industries.
+      Phone Number : +644142956
+
+      Email : admin@qsofte.com
+
+      Address: 1 Te Hoiere Street , Aotea , Porirua , Wellington - 5024.
       </p>
     </div>
   );
