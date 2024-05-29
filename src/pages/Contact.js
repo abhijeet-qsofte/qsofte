@@ -34,7 +34,7 @@ function Contact() {
       <ContactInfo>
         <ContactDetail>Phone: +64224142956</ContactDetail>
         <ContactDetail>Email: admin@qsofte.com </ContactDetail>
-        <ContactDetail>Address: 1 Te Hoiere Street , Aotea , Porirua, pin- 5024,Wellington </ContactDetail>
+        <ContactDetail>Address: 1 Te Hoiere Street , Aotea , Porirua  </ContactDetail>
       </ContactInfo>
     </ContactContainer>
   );
