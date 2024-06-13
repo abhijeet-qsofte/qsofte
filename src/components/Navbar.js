@@ -106,17 +106,11 @@ const Navbar = ({ theme }) => {
             Home
           </StyledNavLink>
           <StyledNavLink
-            to="/about"
-            activeClassName="active"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            About
-          </StyledNavLink>
-          <StyledNavLink
             to="/services"
             activeClassName="active"
             onClick={() => setIsMobileMenuOpen(false)}
           >
+          
             Services
           </StyledNavLink>
           <StyledNavLink
