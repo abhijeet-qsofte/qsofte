@@ -136,11 +136,10 @@ export const ImageSection = styled.section`
 `;
 
 export const StickyFooter = styled.div`
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  @media (max-width: 768px) {
-    height: 10%;
+ bottom: 0;
+ width: 100%;
+ @media (max-width: 768px) {
+   height: 10%;
   } // Adjust as needed
 `;
 
