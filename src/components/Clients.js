@@ -37,14 +37,12 @@ const SectionTitle = styled.h2`
 
 const ClientsList = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: ${({ theme }) => theme.spacing.large};
 
   @media (max-width: 768px) {
     flex-direction: row; // Change to row for smaller screens
     align-items: center;
-    overflow: auto; // Add scrolling if the logos don't fit
   }
 `;
 
