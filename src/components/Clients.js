@@ -5,24 +5,45 @@ import westpaclogo from '../assets/client-logo/westpaclogo.png';
 import atmabodhlogo from '../assets/client-logo/atmabodhlogo.png';
 import chillimasalalogo from '../assets/client-logo/chillimasalalogo.png';
 import adyopantlegallogo from '../assets/client-logo/adyopantlegallogo.png';
+import {
+  Heading,
+  HeroSection,
+  CallToActionButton,
+  PageContainer,
+  Subheading,
+  Paragraph,
+  roll,
+} from '../GlobalStyle.js';
 
 const ClientsSection = styled.section`
   width: 100%;
-  padding: ${({ theme }) => theme.spacing.large} 0;
+  padding: ${({ theme }) => theme.spacing.low} 0;
   background-color: ${({ theme }) => theme.colors.lightBackground};
   text-align: center;
+
+  @media (max-width: 768px) {
+    max-height: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const SectionTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.textPrimary};
-  margin-bottom: ${({ theme }) => theme.spacing.large};
+  color: ${({ theme }) => theme.colors.Primary};
+  margin-bottom: ${({ theme }) => theme.spacing.container};
+  font-size: 1.5rem;
+  font-weight: bold;
 `;
 
 const ClientsList = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: ${({ theme }) => theme.spacing.medium};
+  gap: ${({ theme }) => theme.spacing.large};
+
+  @media (max-width: 768px) {
+    flex-direction: row; // Change to row for smaller screens
+    align-items: center;
+  }
 `;
 
 const ClientLogo = styled.img`
@@ -35,19 +56,22 @@ const ClientLogo = styled.img`
   //  &:hover {
   //   filter: grayscale(10);
   // }
+
+  @media (max-width: 768px) {
+    max-width: 100px;
+    height: 100px;
+  }
 `;
 
 const Clients = () => {
   return (
     <ClientsSection>
-      <SectionTitle>Our Clients</SectionTitle>
       <ClientsList>
         {/* Repeat ClientLogo for each client */}
         <ClientLogo src={westpaclogo} alt="Westpac" />
-        <ClientLogo src={chillimasalalogo} alt="Westpac" />
-        <ClientLogo src={adyopantlegallogo} alt="Westpac" />
-        <ClientLogo src={atmabodhlogo} alt="Westpac" />
-
+        <ClientLogo src={chillimasalalogo} alt="Chillimasala" />
+        <ClientLogo src={adyopantlegallogo} alt="Adyopant" />
+        <ClientLogo src={atmabodhlogo} alt="Atmabodh" />
         {/* Add more as needed */}
       </ClientsList>
     </ClientsSection>

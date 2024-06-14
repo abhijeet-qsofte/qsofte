@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Clients from '../components/Clients';
 import Services from './Services';
-import { StickyFooter } from '../GlobalStyle.js';
 
 import {
   Heading,
@@ -11,6 +10,8 @@ import {
   PageContainer,
   Subheading,
   Paragraph,
+  StickyFooter,
+  Spacer,
 } from '../GlobalStyle.js';
 
 function Home() {
@@ -19,15 +20,16 @@ function Home() {
       <HeroSection>
         <Heading>Your Technology Partner</Heading>
       </HeroSection>
-
       <PageContainer>
-        <Subheading font="2">Innovate. Elevate. Excel.</Subheading>
+        <Subheading>Innovate. Elevate. Excel.</Subheading>
         <Paragraph>
-          At Qsofte, our passion for excellence transforms your business
-          challenges into success stories. We blend creativity, diversity, and
-          expertise to deliver personalized solutions that not only meet but
-          exceed your expectations.
+          Dive into a partnership with Qsofte, where passion meets precision and
+          diversity drives innovation. Tailored expertise for unmatched
+          efficiency and breakthrough growth. Your goals, our mission. Together,
+          we don’t just reach targets—we set new benchmarks.
         </Paragraph>
+        <Spacer></Spacer>
+        <CallToActionButton>Let's Connect</CallToActionButton>
         <StickyFooter>
           <Clients></Clients>
         </StickyFooter>

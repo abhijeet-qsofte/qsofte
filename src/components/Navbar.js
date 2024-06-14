@@ -83,9 +83,6 @@ const Navbar = ({ theme }) => {
           <StyledNavLink to="/" exact activeClassName="active">
             Home
           </StyledNavLink>
-          <StyledNavLink to="/about" activeClassName="active">
-            About
-          </StyledNavLink>
           <StyledNavLink to="/services" activeClassName="active">
             Services
           </StyledNavLink>
@@ -109,17 +106,11 @@ const Navbar = ({ theme }) => {
             Home
           </StyledNavLink>
           <StyledNavLink
-            to="/about"
-            activeClassName="active"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            About
-          </StyledNavLink>
-          <StyledNavLink
             to="/services"
             activeClassName="active"
             onClick={() => setIsMobileMenuOpen(false)}
           >
+          
             Services
           </StyledNavLink>
           <StyledNavLink
