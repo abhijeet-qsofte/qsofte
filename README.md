@@ -20,7 +20,7 @@ A brief description of your project.
 
 1. **Prerequisites**:
     - **Install an IDE**: We recommend [VS Code](https://code.visualstudio.com/).
-    - **Install Node.js**: Download and install it from [nodejs.org](https://nodejs.org/).
+    - **Install Node.js**: Download and install it from [nodejs.org](https://nodejs.org/)(make sure to restart after download).
     - **Install Git**: Download and install Git from [git-scm.com](https://git-scm.com/).
 
 2. **Steps**:
@@ -31,14 +31,16 @@ A brief description of your project.
         ```
     2. Navigate to the repository directory:
         ```bash
-        cd <repository-directory>
+        cd <qsofte>
         ```
-    3. Install npm dependencies:
+    3. Install npm dependencies and fix vulnerabilities:
         ```bash
         npm install
+        npm fix --force 
         ```
-    4. Create a new branch:
+    4. Switch to test and Create a new branch:
         ```bash
+        git checkout test 
         git checkout -b <branch-name>
         ```
     5. Make changes to the repository.
