@@ -29,39 +29,42 @@ A brief description of your project.
         ```bash
         git clone <repository-link>
         ```
-    2. Navigate to the repository directory:
+    2. Navigate to the repository directory and declare username:
         ```bash
         cd <qsofte>
+        git config --global user.email "you@example.com"
         ```
     3. Install npm dependencies and fix vulnerabilities:
         ```bash
         npm install
-        npm fix --force 
+        npm audit fix --force 
         ```
-    4. Switch to test and Create a new branch:
-        ```bash
-        git checkout test 
-        git checkout -b <branch-name>
-        ```
-    5. Make changes to the repository.
 
-    6. Stage changes for commit:
+    4. Create feature branch based on remote test branch and switch to the feature branch:
+        ```bash
+
+       git checkout -b <local-branch-name> remotes/origin/test
+
+        ```
+    6. Make changes to the repository.
+
+    7. Stage changes for commit:
         ```bash
         git add <file-name>
         ```
-    7. Commit changes:
+    8. Commit changes:
         ```bash
         git commit -m "Your commit message"
         ```
-    8. Run the project:
+    9. Run the project:
         ```bash
         npm start
         ```
-    9. Push changes to the remote repository:
+    10. Push changes to the remote repository:
         ```bash
         git push origin <branch-name>
         ```
-    10. Create a pull request with the branch.
+    11. Create a pull request with the branch.
 
 ### Explanation of Commands
 
