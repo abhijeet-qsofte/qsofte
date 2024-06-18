@@ -47,7 +47,7 @@ export const Heading = styled.h1`
   color: ${({ theme }) => lighten(0.1, theme.colors.secondary)};
   font-size: 3.5rem;
   margin-top: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 75px;
   margin-left: 35px;
   text-align: center;
   align-self: flex-start;

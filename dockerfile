@@ -23,7 +23,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port your app will be running on
-EXPOSE 5000
+EXPOSE 3000
 
 # Serve the app using `serve`. Adjust the port to match the EXPOSE command above
 CMD ["serve", "-s", "/qsofte/build", "-l", "5000"]

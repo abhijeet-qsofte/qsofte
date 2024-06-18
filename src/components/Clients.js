@@ -50,6 +50,7 @@ const ClientLogo = styled.img`
   max-width: 225px; // Adjust based on actual logo sizes
   height: 220px;
   object-fit: contain;
+  margin-left: -7px;
   //filter: grayscale(100%); // Makes the logos monochrome
   //transition: filter 0.3s ease;
 
