@@ -5,7 +5,7 @@
 
 ## Description
 
-A brief description of your project.
+![Architecture Diagram](./Flowcharts.png)
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ A brief description of your project.
 
 1. **Prerequisites**:
     - **Install an IDE**: We recommend [VS Code](https://code.visualstudio.com/).
-    - **Install Node.js**: Download and install it from [nodejs.org](https://nodejs.org/)(make sure to restart after download).
+    - **Install Node.js**: Download and install it from [nodejs.org](https://nodejs.org/).
     - **Install Git**: Download and install Git from [git-scm.com](https://git-scm.com/).
 
 2. **Steps**:
@@ -31,39 +31,35 @@ A brief description of your project.
         ```
     2. Navigate to the repository directory:
         ```bash
-        cd <qsofte>
+        cd <repository-directory>
         ```
-    3. Install npm dependencies and fix vulnerabilities:
+    3. Install npm dependencies:
         ```bash
         npm install
-        npm audit fix --force 
         ```
-
-    4. Create feature branch based on remote test branch and switch to the feature branch:
+    4. Create a new branch:
         ```bash
-
-       git checkout -b <local-branch-name> remotes/origin/test
-
+        git checkout -b <branch-name>
         ```
-    6. Make changes to the repository.
+    5. Make changes to the repository.
 
-    7. Stage changes for commit:
+    6. Stage changes for commit:
         ```bash
         git add <file-name>
         ```
-    8. Commit changes:
+    7. Commit changes:
         ```bash
         git commit -m "Your commit message"
         ```
-    9. Run the project:
+    8. Run the project:
         ```bash
         npm start
         ```
-    10. Push changes to the remote repository:
+    9. Push changes to the remote repository:
         ```bash
         git push origin <branch-name>
         ```
-    11. Create a pull request with the branch.
+    10. Create a pull request with the branch.
 
 ### Explanation of Commands
 
@@ -125,7 +121,7 @@ A brief description of your project.
 
 2. **Build the Docker image**:
     ```bash
-    docker build --platform="linux/amd64" -t qsofte:<version> .
+    ild --platform="linux/amd64" -tdocker bu qsofte:<version> .
     ```
 
     - Replace `<version>` with the version you are building, e.g., `v0.10`.
@@ -149,6 +145,40 @@ A brief description of your project.
     ```
 
     - Replace `<version>` with your image version, e.g., `v0.11`.
+
+## Testing the Docker Image on a VPS Server
+
+1. **SSH into your VPS and sudo**:
+    ```bash
+    ssh user@TestBoxIp
+    sudo su 
+    ```
+
+2. **Pull the Docker image from Docker Hub**:
+    ```bash
+    docker pull qsofte/qsofte:<version>
+    ```
+
+    - Replace `<version>` with the version you want to pull, e.g., `v0.11`.
+
+3. **Run the Docker container**:
+    ```bash
+    docker run -p 8443:5000 -it qsofte/qsofte:<version>
+    ```
+
+4. **Verify the container is running**:
+    ```bash
+    docker ps
+    ```
+
+    - This command lists all running containers. You should see `qsofte-container` in the list.
+
+5. **Access your application**:
+    - Open a web browser and go to `http://testboxip`. You should see your application running.
+
+## Deploying the Docker Image on a Production Box
+
+Repeat the all steps done for test box but use qsoft.com as the ip instead 
 
 ## Usage
 
