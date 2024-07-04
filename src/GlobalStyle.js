@@ -100,7 +100,7 @@ export const Highlight = styled.span`
   color: #1976d2;
 `;
 
-export const CallToActionButton = styled(Button)`
+export const CallToActionButton = styled(Button )`
   && {
     display: inline-block;
     max-width: 200px;
