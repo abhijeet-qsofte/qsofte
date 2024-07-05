@@ -6,15 +6,6 @@ import "./Connect.css";
 const Connect = () => {
   return (
     <div className="mainPage">
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
-      <h1>Hello</h1>
       <h1 className="LetsConnect">Connect With Us</h1>
       <div className="row">
         <div className="col">

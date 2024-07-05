@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="./LetsConnect/contact" element={<Connect />} />
+          <Route path="/LetsConnect/Connect" element={<Connect />} />
         </Routes>
       </Router>
     </ThemeProvider>
