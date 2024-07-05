@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Clients from '../components/Clients';
-import Services from './Services';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import Clients from "../components/Clients";
+import Services from "./Services";
+import { useNavigate } from "react-router-dom";
 
 import {
   Heading,
@@ -13,7 +13,7 @@ import {
   Paragraph,
   StickyFooter,
   Spacer,
-} from '../GlobalStyle.js';
+} from "../GlobalStyle.js";
 
 function Home() {
   const navigate = useNavigate();
@@ -31,7 +31,9 @@ function Home() {
           we don’t just reach targets—we set new benchmarks.
         </Paragraph>
         <Spacer></Spacer>
-        <CallToActionButton onClick={() => navigate("/Connect")}>Let's Connect</CallToActionButton>
+        <CallToActionButton onClick={() => navigate("./LetsConnect/Connect")}>
+          Let's Connect
+        </CallToActionButton>
         <StickyFooter>
           <Clients></Clients>
         </StickyFooter>
