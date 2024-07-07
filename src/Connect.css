@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.mainPage {
+  height: 44rem;
+  width: 30rem;
+  background-color: rgb(255,255,255);
+  margin: 5rem 0 5rem 30rem;
+}
+
+.LetsConnect {
+  color: rgb(181,228,211);
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  padding-top: 5rem;
+  font-size: xx-large;
+}
+
+.contact-form {
+  max-width: 50rem;
+  margin: auto;
+}
+
+.container {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.Button {
+  width: 5rem;
+  text-align: center;
+  margin-left: 15rem;
+  background-color: rgb(48, 48, 236);
+  color: whitesmoke;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Button:hover {
+  background-color: rgb(247, 247, 250);
+  border: 1px solid rgb(15, 15, 15);
+  color: rgb(9, 9, 146);
+  transform: scale(0.9);
+}

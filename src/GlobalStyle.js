@@ -1,9 +1,9 @@
 // src/GlobalStyle.js
-import { createGlobalStyle } from 'styled-components';
-import styled, { keyframes } from 'styled-components';
-import { lighten } from 'polished';
-import { Button } from '@mui/material';
-import backgroundImage from './assets/hero-3.jpg';
+import { createGlobalStyle } from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { lighten } from "polished";
+import { Button } from "@mui/material";
+import backgroundImage from "./assets/hero-3.jpg";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -100,7 +100,7 @@ export const Highlight = styled.span`
   color: #1976d2;
 `;
 
-export const CallToActionButton = styled(Button )`
+export const CallToActionButton = styled(Button)`
   && {
     display: inline-block;
     max-width: 200px;
@@ -136,15 +136,15 @@ export const ImageSection = styled.section`
 `;
 
 export const StickyFooter = styled.div`
- bottom: 0;
- width: 100%;
- @media (max-width: 768px) {
-   height: 10%;
+  bottom: 0;
+  width: 100%;
+  @media (max-width: 768px) {
+    height: 10%;
   } // Adjust as needed
 `;
 
 export const Spacer = styled.div`
-  margin: ${({ top = '20px', bottom = '20px' }) => `${top} 0 ${bottom} 0`};
+  margin: ${({ top = "20px", bottom = "20px" }) => `${top} 0 ${bottom} 0`};
   @media (max-width: 768px) {
     height: 5px;
   } // Adjust as needed

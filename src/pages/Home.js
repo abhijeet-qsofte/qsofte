@@ -31,7 +31,7 @@ function Home() {
           we don’t just reach targets—we set new benchmarks.
         </Paragraph>
         <Spacer></Spacer>
-        <CallToActionButton onClick={() => navigate("/LetsConnect/Connect")}>
+        <CallToActionButton onClick={() => navigate("/Connect")}>
           Let's Connect
         </CallToActionButton>
         <StickyFooter>

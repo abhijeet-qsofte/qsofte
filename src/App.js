@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import Connect from "./LetsConnect/Connect";
+import Connect from "./pages/Connect";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/LetsConnect/Connect" element={<Connect />} />
+          <Route path="/Connect" element={<Connect />} />
         </Routes>
       </Router>
     </ThemeProvider>
