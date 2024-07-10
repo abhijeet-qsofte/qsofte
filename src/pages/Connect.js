@@ -29,6 +29,13 @@ const Connect = () => {
               required
             />
 
+            <input
+              type="text"
+              id="mobile"
+              name="mobile"
+              placeholder="Phone Number (Optional)"
+            />
+
             <textarea
               name="message"
               cols="30"
