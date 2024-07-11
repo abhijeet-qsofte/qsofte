@@ -52,6 +52,7 @@ export const Heading = styled.h1`
   text-align: center;
   align-self: flex-start;
   font-weight: bolder;
+  margin-bottom: 76px;
 
   @media (max-width: 768px) {
     font-size: 3.1rem; // Reduced font size for small screens
