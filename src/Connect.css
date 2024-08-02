@@ -60,14 +60,14 @@ margin-left: 32%;
 }
 
 .Button {
-  width: 5rem;
-  text-align: center;
-  margin-left: 15rem;
-  background-color: rgb(48, 48, 236);
-  color: whitesmoke;
-  border-radius: 8px;
+  background-color: #8fd7bd;
+  border-radius: 4px;
+  color: #1b2a51;
   cursor: pointer;
-  transition: all 0.2s;
+  margin-left: 15rem;
+  text-align: center;
+  transition: all .2s;
+  width: 5rem;
 }
 
 @media(max-width: 450px) {
@@ -82,16 +82,21 @@ margin-left: 32%;
   }
 }
 .Button:hover {
-  background-color: rgb(247, 247, 250);
+  background-color: #c9f0e2;
   border: 1px solid rgb(15, 15, 15);
-  color: rgb(9, 9, 146);
-  transform: scale(0.9);
+  color: #1b2a51;
+  transform: scale(1);
 }
 
 input {
   border: 1px solid black;
+  margin-left: 5%;
+  width: 90%;
+  height: 25px;
 }
 
 textarea {
   border: 1px solid black;
+  margin-left: 5%;
+  width: 90%;
 }
