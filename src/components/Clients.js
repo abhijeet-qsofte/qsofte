@@ -1,10 +1,10 @@
 // src/components/Clients.js
-import React from 'react';
-import styled from 'styled-components';
-import westpaclogo from '../assets/client-logo/westpaclogo.png';
-import atmabodhlogo from '../assets/client-logo/atmabodhlogo.png';
-import chillimasalalogo from '../assets/client-logo/chillimasalalogo.png';
-import adyopantlegallogo from '../assets/client-logo/adyopantlegallogo.png';
+import React from "react";
+import styled from "styled-components";
+import westpaclogo from "../assets/client-logo/westpaclogo.png";
+import atmabodhlogo from "../assets/client-logo/atmabodhlogo.png";
+import chillimasalalogo from "../assets/client-logo/chillimasalalogo.png";
+import adyopantlegallogo from "../assets/client-logo/adyopantlegallogo.png";
 import {
   Heading,
   HeroSection,
@@ -13,7 +13,7 @@ import {
   Subheading,
   Paragraph,
   roll,
-} from '../GlobalStyle.js';
+} from "../GlobalStyle.js";
 
 const ClientsSection = styled.section`
   width: 100%;
@@ -58,7 +58,7 @@ const ClientLogo = styled.img`
   // }
 
   @media (max-width: 768px) {
-    max-width: 100px;
+    max-width: 90px;
     height: 100px;
   }
 `;
