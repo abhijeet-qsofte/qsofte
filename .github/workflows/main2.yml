@@ -22,8 +22,8 @@ jobs:
       
       - name: Build and push Docker image
         run: |
-          docker build -t username/qsofte:latest .
-          docker push username/qsofte:latest
+          docker build -t username/qsofte:v0.58 .
+          docker push username/qsofte:v0.58
       
       - name: Deploy to VPS
         uses: appleboy/ssh-action@master
