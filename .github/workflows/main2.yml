@@ -22,7 +22,7 @@ jobs:
       
       - name: Build and push Docker image
         run: |
-          docker build -t username/qsofte:v0.58 .
+          docker build --platform="linux/amd64" -t qsofte:v0.58 .
           docker push username/qsofte:v0.58
       
       - name: Deploy to VPS
