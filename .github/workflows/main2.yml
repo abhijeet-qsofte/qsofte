@@ -35,4 +35,3 @@ jobs:
             docker pull username/repo_name:latest
             cd repo_name
             docker-compose up -d --build
-view rawmain.yaml hosted with ❤ by GitHub
